@@ -3599,7 +3599,17 @@ html {
     margin-bottom: 0;
     font-weight: 400;
   }
-  
+
+  h7 {
+    font-family: var(--font-family--headlines);
+    color: var(--font--colors--title-dark);
+    font-size: var(--font-size--headings--h6);
+    line-height: var(--line-height--regular);
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+
   p {
     margin-bottom: 0;
   }
@@ -3800,7 +3810,7 @@ html {
   
   .display-5 {
     font-size: var(--font-size--displays--display-5);
-    line-height: var(--line-height--regular);
+    line-height: 1.26em;;
   }
   
   .display-4 {
@@ -3811,6 +3821,8 @@ html {
   .display-3 {
     font-size: var(--font-size--displays--display-3);
     line-height: var(--line-height--regular);
+    margin-top: 10px;
+    margin-bottom: 5px;
   }
   
   .display-3.mid.mg-bottom-20px {
@@ -3833,6 +3845,7 @@ html {
   
   .text-titles {
     color: var(--font--colors--title-dark);
+    
   }
   
   .mg-right-5x-extra-small {
@@ -7345,7 +7358,8 @@ html {
   .hamburger-menu {
     grid-row-gap: 0px;
     border-radius: var(--border-radius--br-size-3);
-    background-color: var(--colors--neutral--100);
+    background-color: #0b8c88;
+    color: #1eb085;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -8265,8 +8279,13 @@ html {
   }
   
   .dropdown-pd.dropdown-main {
-    min-width: 940px;
-  }
+    min-width: auto; /* Remove the fixed min-width */
+    width: auto; /* Automatically adjust based on content */
+    max-width: 100%; /* Optional: Set a maximum width */
+    display: inline-block; /* Allow it to only take the space it needs */
+    white-space: nowrap; /* Prevents the text from wrapping to a new line */
+}
+    
   
   .dropdown-link {
     color: var(--colors--neutral--300);
